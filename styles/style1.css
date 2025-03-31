@@ -11,29 +11,95 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 50px 0px 20px;
+    padding: 0px 24px 0px 40px;
     border: 1px solid #ccc;
+}
+.logo {
+    width: 94px;
+    height: 34px;
+    margin-left: 24px; /* Отступ слева */
+    margin-right: 40px;
 }
 .search-container {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    margin: 0 20px;
-}
-.search-container input {
-    height: 42px;
-    padding: 0 10px;
-    font-size: 16px;
+    justify-content: space-between;
     border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.search-container-right {
-    width: 300px;
-    height: 42px;
-    border: none;
+    border-radius: 8px;
+    left: 58px;
+  }
+  
+  .search-container-left {
     display: flex;
     align-items: center;
-    padding: 10px;
+    position: relative;
+    width: 300px;
+    height: 42px;
+    padding: 0;
+    border-right: 1px solid #ccc; /* Разделительная линия между левым и правым контейнерами */
+  }
+  
+  .search-container-left input {
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;  /* Чтобы текст не перекрывался с иконкой */
+    border: none;  /* Убираем границу у инпута */
+    border-radius: 8px 0 0 8px;  /* Округляем левую часть инпута */
+    font-size: 16px;
+  }
+  
+  .search-container-left .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+  }
+  
+  .search-container-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 42px;
+    padding: 0;
+  }
+  
+  .search-container-right input {
+    width: 285px;
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 0 8px 8px 0;  /* Округляем правую часть инпута */
+    font-size: 16px;
+  }
+  .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 42px; /* Ширина кнопки */
+    height: 42px; /* Высота кнопки */
+    border-radius: 0 8px 8px 0; /* Округляем правую часть кнопки */
+
+  }
+  .search-btn img {
+    width: 42px; /* Размер иконки в кнопке */
+    height: 42px;
+    border: none;
+  }
+  .search-container input:focus {
+    outline: none; /* Убираем стандартную рамку при фокусе */
+    border-color: #ccc; /* Можно оставить цвет границы по вашему выбору */
+  }
+  .search-container .search-btn:focus {
+    outline: none; /* Убираем стандартную рамку при фокусе кнопки */
+  }
+input {
+    width: 285px;
 }
 .search-btn {
     width: 42px;
@@ -41,12 +107,20 @@
     border: none;
     cursor: pointer;
 }
+
 .buttons {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 231px;
+    cursor: pointer;
 }
 .buttons button {
-    margin-right: 22px;
+    margin-right: 21,8px;
+}
+/* Убираем отступ справа у последней кнопки */
+.buttons button:last-child {
+    margin-right: 0;
 }
 .signup-btn {
     width: 83px;
@@ -58,3 +132,22 @@
     font-size: 14px;
     border: none;
 }
+.centered-button {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 70px; 
+    height: 20px; 
+    font-size: 14px;
+    background-color: #fff; 
+    border: none;
+    cursor: pointer; 
+  }
+  .centered-button img {
+    margin-right: 5px;
+    width: 20px; 
+    height: 20px; 
+  }
+  .login {
+    border: none;
+  }
