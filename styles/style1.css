@@ -107,12 +107,10 @@
 }
 
 .signup-btn {
-    width: 83px;
-    height: 36px;
+    padding: 8px 16px 8px 16px;
     background-color: #00798A;
     color: white;
     border-radius: 8px;
-    top: 14px;
     font-size: 14px;
     border: none;
 }
@@ -132,7 +130,9 @@
     width: 20px; 
     height: 20px; 
   }
-
+.login {
+  border: none;
+}
 
  /* Медиазапрос для экрана шириной 393px */
 @media (max-width: 393px) {
@@ -151,4 +151,33 @@
   }
 
 }
-  
+.main_up {
+  margin-left: 170px;
+  margin-right: 320px;
+  margin-top: 69px;
+  display: flex;
+  justify-content: space-between;
+} 
+
+.main_up_right {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+h1 {
+  font-size: 42px;
+}
+p {
+  font-size: 16px;
+}
+.meetup {
+  width: 125px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  background-color: #00798A;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
