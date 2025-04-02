@@ -11,14 +11,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 24px 0px 40px;
+    flex-wrap: wrap;
+    padding: 14px;
     border: 1px solid #ccc;
+    position: relative;
 }
 .logo {
     width: 94px;
     height: 34px;
     margin-left: 24px; /* Отступ слева */
-    margin-right: 40px;
+    margin-right:40px;
 }
 .search-container {
     display: flex;
@@ -26,7 +28,7 @@
     justify-content: space-between;
     border: 1px solid #ccc;
     border-radius: 8px;
-    left: 58px;
+    margin-right: 45px;
   }
   
   .search-container-left {
@@ -81,16 +83,11 @@
     background: none;
     border: none;
     cursor: pointer;
-    width: 42px; /* Ширина кнопки */
-    height: 42px; /* Высота кнопки */
-    border-radius: 0 8px 8px 0; /* Округляем правую часть кнопки */
-
-  }
-  .search-btn img {
-    width: 42px; /* Размер иконки в кнопке */
+    width: 42px; 
     height: 42px;
-    border: none;
+    border-radius: 0 8px 8px 0;
   }
+
   .search-container input:focus {
     outline: none; /* Убираем стандартную рамку при фокусе */
     border-color: #ccc; /* Можно оставить цвет границы по вашему выбору */
@@ -98,15 +95,6 @@
   .search-container .search-btn:focus {
     outline: none; /* Убираем стандартную рамку при фокусе кнопки */
   }
-input {
-    width: 285px;
-}
-.search-btn {
-    width: 42px;
-    height: 42px;
-    border: none;
-    cursor: pointer;
-}
 
 .buttons {
     display: flex;
@@ -114,14 +102,10 @@ input {
     justify-content: space-between;
     width: 231px;
     cursor: pointer;
+    gap: 21,8px;
+    margin-right: 50px;
 }
-.buttons button {
-    margin-right: 21,8px;
-}
-/* Убираем отступ справа у последней кнопки */
-.buttons button:last-child {
-    margin-right: 0;
-}
+
 .signup-btn {
     width: 83px;
     height: 36px;
@@ -148,6 +132,23 @@ input {
     width: 20px; 
     height: 20px; 
   }
-  .login {
-    border: none;
+
+
+ /* Медиазапрос для экрана шириной 393px */
+@media (max-width: 393px) {
+  .logo {
+      margin-left: 24px; 
   }
+
+  .buttons {
+      margin-right: 15px; 
+      width: auto;
+  }
+  .search-container {
+    margin-top: 53px;
+    margin-left: 20px;
+ 
+  }
+
+}
+  
