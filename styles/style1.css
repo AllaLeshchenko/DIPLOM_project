@@ -139,7 +139,6 @@
   .logo {
       margin-left: 24px; 
   }
-
   .buttons {
       margin-right: 15px; 
       width: auto;
@@ -147,12 +146,11 @@
   .search-container {
     margin-top: 53px;
     margin-left: 20px;
- 
   }
 
 }
 .main_up {
-  margin-left: 170px;
+  margin-left: 200px;
   margin-right: 320px;
   margin-top: 69px;
   display: flex;
@@ -180,4 +178,37 @@ p {
   font-size: 16px;
   border: none;
   cursor: pointer;
+}
+
+.main_up_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 379px;
+  height: 269px;
+}
+
+@media (max-width: 393px) {
+  .main_up {
+    flex-direction: column; /* Сначала будет вертикально располагаться */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .main_up_right h1 {
+    font-size: 25px;
+  }
+  .main_up_right p {
+    font-size: 12px;
+  }
+  .main_up_right .meetup {
+    display: none;
+  }
+  .main_up_left img {
+    width: 215px;
+    height: 153px;
+  }
+  .main_up_left {
+    justify-content: center;
+  }
 }
