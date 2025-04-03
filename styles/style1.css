@@ -508,20 +508,3 @@ h2 {
     height: 12px;
   }
 }
-.parent {
-  border: 1px solid grey;
-  max-width: 100%; /* Устанавливаем на 100% ширины контейнера */
-  display: grid; 
-  grid-template-columns: repeat(4, 1fr); /* 4 столбца */
-  grid-template-rows: auto; /* Автоматическая высота для рядов */
-  grid-gap: 36px; /* Интервал между элементами */
-  justify-items: center;
-}
-.child {
-  border: 1px solid gray;
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  width: 272px; /* Элемент занимает доступную ширину */
-  height: 380px;
-}
