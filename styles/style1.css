@@ -232,7 +232,6 @@ h2 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: ;
 }
 .events_near_right {
   max-width: 1027px;
@@ -269,7 +268,6 @@ h2 {
   cursor: pointer;
   width: 22px;
   height: 22px;
-
 }
 .events_input input::placeholder { /* Стили для текста в placeholder */
   color: #00798A; /* Цвет текста */
@@ -280,4 +278,27 @@ a {
   text-decoration: none;
   color: #00798A; /* Цвет ссылки */
   padding-right: 5px;
+}
+
+.events_parent {
+  max-width: 1196px;
+  width: 100%;
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 36px; 
+  grid-template-rows: repeat(3, auto); 
+}
+.event_child {
+  border: 1px solid gray;
+  width: 272px;
+  height: 399px;
+}
+
+@media (max-width: 393px) {
+  .events_parent {
+    grid-template-columns: 1fr;
+    display: flex;
+    
+      }
+      
 }
