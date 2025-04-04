@@ -368,16 +368,15 @@ h2 {
   width: 100%;
   display: grid; 
   grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(3, auto); 
-  grid-gap: 36px; 
+  grid-template-rows: repeat(2, 1fr); 
+  grid-gap: 35px; 
   }
-
 .event_child {
   border: 1px solid gray;
   width: 272px;
   height: 399px;
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
 }
 .event_child_img {
@@ -413,7 +412,7 @@ h2 {
   gap: 16px;
 }
 .going {
-  width: 80px;
+  width: 87px;
   display: flex;
   gap: 5px;
   font-size: 6px;
@@ -490,7 +489,7 @@ h2 {
     gap: 5px;
   }
   .going p {
-    font-size: 12px;
+    font-size: 10px;
   }
   .going img {
     width: 12px;
@@ -502,10 +501,20 @@ h2 {
     gap: 5px;
   }
   .free p {
-    font-size: 12px;
+    font-size: 10px;
   }
   .free img {
     width: 12px;
     height: 12px;
   }
+}
+
+
+
+.join_meetup {
+  width: 100%;
+  max-width: 1192px;
+  height: 236px;
+  border: 1px solid gray;
+  background: f;
 }
