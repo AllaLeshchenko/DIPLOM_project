@@ -141,20 +141,17 @@
 }
 
 .main {
-  background: rgb(229, 197, 229);
+  background: rgb(248, 238, 248);
 }
 
 .main_up {
-  border: 1px solid grey; 
   max-width: 1196px;
-  /* margin: auto; */
   width: 100%;
   height: auto;
   margin: auto;
   margin-top: 71px;
   display: flex;
   justify-content: space-between;
-  background: rgb(186, 230, 224);
 } 
 .main_up_right {
   max-width: 609px;
@@ -231,7 +228,6 @@ p {
    width: 100%;
    height: 1373px;
    margin: auto;
-   background: yellow;
 }
 .ev_near {
   width: 190px;
@@ -519,9 +515,96 @@ h2 {
 }
 
 
-.class {
-  border: 1px solid gray;
-  width: 1192px;
-  height: 1000px;
-  background: fuchsia;
+
+.join_meetup {
+  border: 1px solid grey; 
+  max-width: 1196px;
+  width: 100%;
+  height: 236px;
+  margin: auto;
+  margin-top: 71px;
+  display: flex;
+  justify-content: space-between;
+  background: #97cad145 ;
+} 
+.join_meetup_right {
+  max-width: 629px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding-top: 36px;
+  padding-left: 56px;
+}
+.join_meetup_right h2 {
+  font-size: 28px;
+}
+.join_meetup_right p {
+  font-size: 16px;
+}
+.singup {
+  width: 192px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: #E32359;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.join_meetup_left {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 341px;
+  height: 196px;
+  margin-right: 56px;
+  margin-bottom: 96px;
+}
+@media (max-width: 393px) {
+  .join_meetup {
+    width: 366px;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column-reverse; 
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+  .join_meetup h2 {
+    font-size: 20px;
+    position: absolute; 
+    top: 6px;
+    left: 1px; 
+  }
+  .join_meetup_left img {
+    width: 238px;
+    height: 137px;
+  }
+  .join_meetup_left {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 15px; 
+    margin-bottom: 0; 
+  }
+  .join_meetup_left img {
+    width: 238px;
+    height: 137px;
+  }
+  .join_meetup_right {
+    display: flex;
+    padding-left: 8px;
+    padding-top: 5px;
+    padding-right: 20px;
+  }
+  .join_meetup_right p {
+    width: 100%;
+    font-size: 12px;
+  }
+  .join_meetup_right .singup {
+    margin: auto;
+    font-size: 14px;
+  }
 }
