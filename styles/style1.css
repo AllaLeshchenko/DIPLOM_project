@@ -19,7 +19,7 @@
 .logo {
     width: 94px;
     height: 34px;
-    margin-left: 24px; /* Отступ слева */
+    margin-left: 24px; 
     margin-right:40px;
 }
 .search-container {
@@ -38,15 +38,15 @@
     width: 300px;
     height: 42px;
     padding: 0;
-    border-right: 1px solid #ccc; /* Разделительная линия между левым и правым контейнерами */
+    border-right: 1px solid #ccc; 
   }
   
   .search-container-left input {
     height: 100%;
     width: 100%;
-    padding-left: 30px;  /* Чтобы текст не перекрывался с иконкой */
-    border: none;  /* Убираем границу у инпута */
-    border-radius: 8px 0 0 8px;  /* Округляем левую часть инпута */
+    padding-left: 30px; 
+    border: none;  
+    border-radius: 8px 0 0 8px;  
     font-size: 16px;
   }
   
@@ -73,7 +73,7 @@
     height: 100%;
     padding: 0 10px;
     border: none;
-    border-radius: 0 8px 8px 0;  /* Округляем правую часть инпута */
+    border-radius: 0 8px 8px 0; 
     font-size: 16px;
   }
   .search-btn {
@@ -89,11 +89,11 @@
   }
 
   .search-container input:focus {
-    outline: none; /* Убираем стандартную рамку при фокусе */
-    border-color: #ccc; /* Можно оставить цвет границы по вашему выбору */
+    outline: none;
+    border-color: #ccc;
   }
   .search-container .search-btn:focus {
-    outline: none; /* Убираем стандартную рамку при фокусе кнопки */
+    outline: none; 
   }
 
 .buttons {
@@ -134,7 +134,7 @@
   border: none;
 }
 
- /* Медиазапрос для экрана шириной 393px */
+
 @media (max-width: 393px) {
   .logo {
       margin-left: 24px; 
@@ -150,7 +150,7 @@
 }
 
 .main_up {
-  /* border: 1px solid grey; */
+  border: 1px solid grey; 
   max-width: 1196px;
   margin: auto;
   width: 100%;
@@ -200,7 +200,7 @@ p {
     width: 353px;
     width: 100%;
     min-height: 350px;
-    flex-direction: column; /* Сначала будет вертикально располагаться */
+    flex-direction: column; 
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -244,7 +244,7 @@ h2 {
   font-size: 28px;
 }
 .events_near {
-  /* border: 1px solid gray; */
+  border: 1px solid gray; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -266,7 +266,7 @@ h2 {
   height: 44px;
   border-radius: 8px;
   color: #00798A;
-  overflow: hidden; /* Это необходимо, чтобы обрезать углы */
+  overflow: hidden; 
 }
 .events_input input {
   width: 100%;
@@ -277,7 +277,7 @@ h2 {
   padding-right: 30px;
   padding-left: 12px;
   background: #97cad13a 12%;
-  outline: none; /* убираем обводку */
+  outline: none; 
 }
 .events_input img {
   position: absolute;
@@ -286,19 +286,19 @@ h2 {
   width: 22px;
   height: 22px;
 }
-.events_input input::placeholder { /* Стили для текста в placeholder */
-  color: #00798A; /* Цвет текста */
+.events_input input::placeholder { 
+  color: #00798A; 
 }
 a {
   font-size: 16px;
   font-weight: 500px;
   text-decoration: none;
-  color: #00798A; /* Цвет ссылки */
+  color: #00798A; 
   padding-right: 5px;
 }
 @media (max-width: 393px) {
   .events {
-    /* border: 1px solid gray; */
+    border: 1px solid gray; 
     max-width: 353px;
     width: 100%;
     margin-left: 20px;
@@ -333,7 +333,7 @@ h2 {
    height: 30px;
    border-radius: 8px;
    color: #00798A;
-   overflow: hidden; /* Это необходимо, чтобы обрезать углы */
+   overflow: hidden; 
  }
  .events_input input {
    width: 100%;
@@ -344,7 +344,7 @@ h2 {
    padding-right: 30px;
    padding-left: 12px;
    background: #97cad13a 12%;
-   outline: none; /* убираем обводку */
+   outline: none; 
  }
  .events_input img {
    position: absolute;
@@ -353,8 +353,8 @@ h2 {
    width: 22px;
    height: 22px;
  }
- .events_input input::placeholder { /* Стили для текста в placeholder */
-   color: #00798A; /* Цвет текста */
+ .events_input input::placeholder { 
+   color: #00798A; 
  }
  a {
   display: none;
@@ -368,15 +368,16 @@ h2 {
   width: 100%;
   display: grid; 
   grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: (3, auto); 
+  grid-template-rows: repeat(3, auto); 
   grid-gap: 36px; 
   }
+
 .event_child {
   border: 1px solid gray;
   width: 272px;
   height: 399px;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   margin-top: 20px;
 }
 .event_child_img {
@@ -436,7 +437,6 @@ h2 {
     grid-gap: 10px;
        }
   .event_child {
-    border: 1px solid gray;
     width: 364px;
     height: 87px;
     display: flex;
@@ -458,6 +458,7 @@ h2 {
     width: 265px;
     height: 64px;
     margin-top: 0px;
+    margin-left: 10px;
   }
   .event_child_content h3 {
     font-size: 14px;
