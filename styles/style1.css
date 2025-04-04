@@ -517,7 +517,6 @@ h2 {
 
 
 .join_meetup {
-  border: 1px solid grey; 
   max-width: 1196px;
   width: 100%;
   height: 236px;
@@ -525,7 +524,7 @@ h2 {
   margin-top: 71px;
   display: flex;
   justify-content: space-between;
-  background: #97cad145 ;
+  background: #d3ebef45;
 } 
 .join_meetup_right {
   max-width: 629px;
@@ -553,7 +552,7 @@ h2 {
   cursor: pointer;
 }
 .join_meetup_left {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 341px;
@@ -606,5 +605,68 @@ h2 {
   .join_meetup_right .singup {
     margin: auto;
     font-size: 14px;
+  }
+}
+
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 64px;
+  max-width: 1196px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.explore_titel {
+  font-size: 28px;
+  font-weight: 600;
+}
+.explore_items {
+  display: flex;
+  text-align: center;
+  gap: 16px;
+}
+.exp_item {
+  width: 135px;
+  height: 112px;
+  background: #d3ebef45;
+  gap: 5px;
+  padding-top: 20px;
+  border-radius: 5px;
+}
+.exp_item p {
+  font-size: 16px;
+}
+@media (max-width: 393px) {
+  .explore {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .explore_titel {
+    font-size: 20px;
+  }
+  .explore_items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 6px; 
+    row-gap: 10px;
+   }
+  .exp_item {
+    width: 135px;
+    height: 112px;
+    background: #d3ebef45;
+    gap: 5px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .exp_item img {
+    width: 20px;
+    height: 20px;
   }
 }
