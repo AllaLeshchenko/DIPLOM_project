@@ -701,3 +701,51 @@ h2 {
   font-size: 12px;
 }
 }
+
+.cities {
+  display: flex;
+  flex-direction: row;
+  gap: 41px;
+  max-width: 1196px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 28px;
+}
+.city {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.city img {
+  width: 205px;
+  height: 205px;
+  text-align: center;
+}
+.city h3 {
+  text-align: center;
+  font-size: 20px;
+}
+@media (max-width: 393px) {
+  .cities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 19px;
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  .cities .city:last-child {
+    display: none;
+  }
+  .city {
+    gap: 18px;
+  }
+  .city img {
+    width: 153px;
+    height: 153px;
+  }
+  .city h3 {
+    font-size: 15px;
+  }
+}
