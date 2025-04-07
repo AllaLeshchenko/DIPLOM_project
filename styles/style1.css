@@ -728,7 +728,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(2, 1fr);
     gap: 19px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-left: 20px;
   }
   .cities .city:last-child {
@@ -758,7 +758,6 @@ h2 {
 }
 .works_up {
   margin-left: 0px;
-  font-size: 28px;
 }
 .works {
   display: flex;
@@ -800,6 +799,8 @@ h2 {
   }
   .works_up {
     margin-left: 0px;
+  }
+  .works_up h3 {
     font-size: 20px;
   }
   .works {
@@ -811,10 +812,8 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 14px;
-    width: 100%; 
-    height: auto; 
-    /* width: 360px;
-    height: 112px; */
+    width: 360px;
+    height: 112px;
     background: #d3ebef45;
     padding: 20px 15px;
    }
@@ -823,10 +822,8 @@ h2 {
     height: 25px;
   }
   .down_content {
-    min-width: 160px; 
-    min-height: 60px; 
-    /* width: 236px;
-    height: 77px; */
+    width: 236px;
+    height: 77px;
     gap: 10px;
     overflow: visible;
   }
@@ -839,5 +836,107 @@ h2 {
   .down_content a {
     font-size: 10px;
     word-wrap: break-word;
+  }
+}
+
+.friendships {
+  max-width: 1196px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.friendships h2 {
+  font-size: 28px;
+}
+.friendships p {
+  font-size: 16px;
+  color: #707070;
+}
+@media (max-width: 393px) {
+.friendships {
+  margin-left: 20px;
+  gap: 12px;
+}
+.friendships h2 {
+  font-size: 20px;
+}
+.friendships p {
+  display: none;
+}
+}
+ 
+
+.events_down {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  max-width: 1196px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 28px;
+}
+.down_cards {
+  width: 376px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.down_cards img {
+  width: 376px;
+  height: 192px;
+}
+.down_cards h4 {
+  font-size: 18px;
+  line-height: 28px;
+  padding-right: 105px;
+}
+.down_cards p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #707070;
+  padding-right: 30px;
+}
+.down_cards  {
+  font-size: 16px;
+  font-weight: 400;
+}
+.down_cards a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 393px) {
+  .events_down {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 364px;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 27px;
+  }
+  .down_cards {
+    gap: 10px;
+  }
+  .down_cards img {
+    width: 344px;
+    height: 183px;
+  }
+  .down_cards h4 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .down_cards p {
+    font-size: 12px;
+    line-height: 23px;
+    padding-right: 110px;
+  }
+  .down_cards a:hover {
+    text-decoration: underline;
   }
 }
