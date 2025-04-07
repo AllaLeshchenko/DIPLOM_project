@@ -223,7 +223,6 @@ p {
 }
 
 .events {
-   border: 1px solid gray;
    max-width: 1196px;
    width: 100%;
    height: 1373px;
@@ -237,7 +236,6 @@ h2 {
   font-size: 28px;
 }
 .events_near {
-  border: 1px solid gray; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -291,7 +289,6 @@ a {
 }
 @media (max-width: 393px) {
   .events {
-    border: 1px solid gray; 
     max-width: 353px;
     width: 100%;
     margin-left: 20px;
@@ -365,7 +362,6 @@ h2 {
   grid-gap: 35px; 
   }
 .event_child {
-  border: 1px solid gray;
   width: 272px;
   height: 399px;
   display: flex;
@@ -750,24 +746,98 @@ h2 {
   }
 }
 
-.works {
+.how_works {
   display: flex;
   flex-direction: column;
+  gap: 24px;
   max-width: 1196px;
   width: 100%;
   height: auto;
   margin: auto;
   margin-top: 64px;
 }
-.works_up h3 {
+.works_up {
+  margin-left: 0px;
   font-size: 28px;
 }
-.works_down 
-.works_down {
-  border: 1px solid gray;
+.works {
   display: flex;
   flex-direction: row;
+  gap: 32px;
+}
+.works_down {
+  display: flex;
+  flex-direction: row;
+  gap: 44px;
   width: 580px;
-
   height: 180px;
+  background: #d3ebef45;
+  padding: 32px 112px 24px 24px;
+}
+.down_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.down_content h4 {
+  font-size: 20px;
+}
+.down_content p {
+  font-size: 16px;
+}
+.down_content a {
+  font-size: 16px;
+  font-weight: 700;
+}
+@media (max-width: 393px) {
+  .how_works {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 64px;
+  }
+  .works_up {
+    margin-left: 0px;
+    font-size: 20px;
+  }
+  .works {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .works_down {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    width: 100%; 
+    height: auto; 
+    /* width: 360px;
+    height: 112px; */
+    background: #d3ebef45;
+    padding: 20px 15px;
+   }
+  .down_img img {
+    width: 25px;
+    height: 25px;
+  }
+  .down_content {
+    min-width: 160px; 
+    min-height: 60px; 
+    /* width: 236px;
+    height: 77px; */
+    gap: 10px;
+    overflow: visible;
+  }
+  .down_content h4 {
+    font-size: 12px;
+  }
+  .down_content p {
+    font-size: 10px;
+  }
+  .down_content a {
+    font-size: 10px;
+    word-wrap: break-word;
+  }
 }
