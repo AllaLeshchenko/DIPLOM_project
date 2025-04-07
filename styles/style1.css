@@ -4,6 +4,12 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
 .header {
     max-width: 1512px;
     width: 100%;
@@ -141,8 +147,11 @@
 }
 
 .main {
-  background: rgb(248, 238, 248);
-}
+  /* background: rgb(248, 238, 248); */
+  max-width: 1512px;
+  width: 100%;
+  height: auto;
+ }
 
 .main_up {
   max-width: 1196px;
@@ -165,6 +174,7 @@ h1 {
 }
 p {
   font-size: 16px;
+  line-height: 24px;
 }
 .meetup {
   width: 125px;
@@ -422,10 +432,10 @@ h2 {
   .events_parent {
     display: grid; 
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
        }
   .event_child {
-    width: 364px;
+    width: 354px;
     height: 87px;
     display: flex;
     flex-direction: row;
@@ -445,7 +455,6 @@ h2 {
     gap: 2px;
     width: 265px;
     height: 64px;
-    margin-top: 0px;
     margin-left: 10px;
   }
   .event_child_content h3 {
@@ -509,7 +518,11 @@ h2 {
   display: flex;
   align-items: center;
 }
-
+@media (max-width: 393px) {
+  .events_online {
+    margin-top: 50px;
+  }
+}
 
 
 .join_meetup {
@@ -558,6 +571,7 @@ h2 {
 }
 @media (max-width: 393px) {
   .join_meetup {
+    /* border: 1px solid gray; */
     width: 366px;
     height: 100%;
     margin-left: 20px;
@@ -566,6 +580,7 @@ h2 {
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    margin-top: 270px;
   }
   .join_meetup h2 {
     font-size: 20px;
@@ -759,6 +774,9 @@ h2 {
 .works_up {
   margin-left: 0px;
 }
+.works_up h3 {
+  font-size: 28px;
+}
 .works {
   display: flex;
   flex-direction: row;
@@ -784,9 +802,10 @@ h2 {
 .down_content p {
   font-size: 16px;
 }
-.down_content a {
+.down_content h5 {
   font-size: 16px;
   font-weight: 700;
+  color: #00798A;
 }
 @media (max-width: 393px) {
   .how_works {
@@ -812,7 +831,7 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 14px;
-    width: 360px;
+    width: 340px;
     height: 112px;
     background: #d3ebef45;
     padding: 20px 15px;
@@ -822,6 +841,7 @@ h2 {
     height: 25px;
   }
   .down_content {
+    border: 1px solid gray;
     width: 236px;
     height: 77px;
     gap: 10px;
@@ -832,10 +852,12 @@ h2 {
   }
   .down_content p {
     font-size: 10px;
+    line-height: 15px;
   }
-  .down_content a {
+  .down_content h5 {
     font-size: 10px;
     word-wrap: break-word;
+    padding-bottom: 30px;
   }
 }
 
@@ -886,6 +908,8 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  font-size: 16px;
+  font-weight: 400;
 }
 .down_cards img {
   width: 376px;
@@ -902,11 +926,11 @@ h2 {
   color: #707070;
   padding-right: 30px;
 }
-.down_cards  {
-  font-size: 16px;
-  font-weight: 400;
+.down_cards h5 {
+  color: #00798A;
+
 }
-.down_cards a:hover {
+.down_cards h5:hover {
   text-decoration: underline;
 }
 @media (max-width: 393px) {
@@ -939,4 +963,55 @@ h2 {
   .down_cards a:hover {
     text-decoration: underline;
   }
+}
+
+
+.footer {
+  max-width: 1512px;
+  width: 100%;
+  height: 1000px;
+  background: #212121;
+  color: #F6F7F8;
+  padding: 24px 196px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer_up {
+  width: 1120px;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 1120px;
+  height: 236px;
+}
+.footer_column {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 373px;
+  height: 224px;
+ }
+ .footer_column h4 {
+  color: #F6F7F8;
+  font-size: 16px;
+  font-weight: 400;
+ }
+ .footer_column a {
+  font-size: 14px;
+  color: #C5C4C4;
+}
+.follows {
+  width: 1120px;
+  height: 90px;
+  border: 1px solid yellow;
+
 }
