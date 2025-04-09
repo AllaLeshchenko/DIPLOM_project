@@ -26,7 +26,8 @@
   left: 24px;
   top: 15px;
 }
-.search-container {
+
+.search_container {
   display: flex;
   width: 592px;
   height: 42px;
@@ -36,7 +37,7 @@
   border-radius: 8px; 
   overflow: hidden;
 }
-.search-container-left {
+.search_container_left {
   border: 1px solid #ccc;
   display: flex;
   align-items: center;
@@ -45,7 +46,7 @@
   height: 42px;
   border-radius: 8px 0 0 8px; 
 }
-.search-container-left input {
+.search_container_left input {
   height: 100%;
   width: 100%;
   padding-left: 30px; 
@@ -53,7 +54,7 @@
   border-radius: 8px 0 0 8px;  
   font-size: 16px;
 }
-.search-container-left .search-icon {
+.search_container_left .search_icon {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -61,7 +62,7 @@
   width: 16px;
   height: 16px;
 }
-.search-container-right {
+.search_container_right {
   display: flex;
   align-items: center;
   width: 294px;
@@ -71,17 +72,17 @@
   border-radius: 0 8px 8px 0;
   border-left: none;
 }
-.search-container-right input {
+.search_container_right input {
   width: 254px;
   height: 100%;
   padding: 0 10px;
   border: none;
   font-size: 16px;
 }
-.search-container-right input::placeholder {
+.search_container_right input::placeholder {
   color: #000000;
 }
-.search-btn {
+.search_btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,11 +93,11 @@
   height: 42px;
   border-radius: 0 8px 8px 0;
 }
-.search-container input:focus {
+.search_container input:focus {
   outline: none;
   border-color: #ccc;
 }
-.search-container .search-btn:focus {
+.search_container .search_btn:focus {
   outline: none; 
 }
 .buttons {
@@ -113,7 +114,7 @@
   font-size: 14px;
   font-weight: 500;
 }
-.signup-btn {
+.signup_btn {
   width: 83px;
   height: 36px;
   padding: 8px 16px 8px 16px;
@@ -122,7 +123,7 @@
   border-radius: 8px;
   border: none;
 }
-.centered-button {
+.centered_button {
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -131,7 +132,7 @@
   border: none;
   cursor: pointer; 
 }
-.centered-button img {
+.centered_button img {
   margin-right: 5px;
   width: 20px; 
   height: 20px; 
@@ -147,13 +148,13 @@
   }
   .logo {
    top: 4px;
-   left: 5px;
+   left: 1px;
   }
   .logo img {
     width: 94px;
     height: 34px;
   }
-  .search-container {
+  .search_container {
     display: flex;
     width: 342px;
     height: 42px;
@@ -161,16 +162,16 @@
     left: 20px;
     top: 52px;
   }
-  .search-container-right input {
+  .search_container_right input {
     display: none;
   }
-  .search-container-left {
+  .search_container_left {
     border-right: none; 
   }
-  .search-container-right {
+  .search_container_right {
     position: relative;
   }
-  .search-btn {
+  .search_btn {
     position: absolute;
     right: 0;
     top: 50%; 
@@ -181,16 +182,16 @@
     width: 220px;
     height: 32px;
     top: 6px;
-    right: 7px;
+    right: 17px;
     gap: 3px;
     font-size: 12px;
   }
-  .centered-button img {
+  .centered_button img {
     margin-right: 3px;
     width: 17px; 
     height: 17px; 
    }
-  .signup-btn {
+  .signup_btn {
     width: 71px;
     height: 31px;
     padding: 7px 14px 7px 14px;
@@ -1005,7 +1006,7 @@ h2 {
   height: auto;
   background: #212121;
   color: #F6F7F8;
-  padding: 124px 196px 40px 96px;
+  padding: 30px 196px 40px 196px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -1082,14 +1083,18 @@ h2 {
   height: 25px;
 }
 .fol_right {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 292px;
+  height: 40px;
+  padding-right: 3px;
 }
 .meet_up {
   display: flex;
   justify-content: space-between;
   width: 800px;
   height: 28px;
-
 }
 .meet_up p {
   font-size: 14px;
@@ -1159,13 +1164,7 @@ h2 {
     gap: 32px;
   }
   .fol_right {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 292px;
-    height: 40px;
-    padding-right: 3px;
-    border: 1px solid yellow;
+    display: none;
   }
   .meet_up {
     width: 177px;
