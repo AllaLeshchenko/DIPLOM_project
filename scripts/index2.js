@@ -68,7 +68,10 @@ const eventsStore = [
   ];
 
   const eventsContainer = document.getElementById('events-container');
-
+// Получаем ссылку на все селекты
+const typeSelect = document.getElementById('type');
+const distanceSelect = document.getElementById('distance');
+const categorySelect = document.getElementById('category');
 // Функция для создания карточки
 function createEventCard(event) {
   const card = document.createElement('div');
@@ -106,3 +109,33 @@ eventsStore.forEach(event => {
     const card = createEventCard(event);
     eventsContainer.appendChild(card);
   });
+
+
+
+
+// Функция для фильтрации событий по типу
+function filterEventsByType() {
+    const type = typeSelect.value; // Получаем выбранный тип
+  
+    // Фильтруем события по типу
+    const filteredEvents = eventsStore.filter(event => {
+      return type === 'any' || event.type === type;
+    });
+  
+    // Перерисовываем карточки событий
+    displayEvents(filteredEvents);
+  }
+  // Функция для отображения событий
+function displayEvents(events) {
+    // Очищаем контейнер перед обновлением
+    eventsContainer.innerHTML = '';
+  
+    // Создаем карточки для каждого события
+    events.forEach(event => {
+      const card = createEventCard(event);
+      eventsContainer.appendChild(card);
+    });
+  }
+// Добавляем обработчик события на селектор типа
+typeSelect.addEventListener('change', filterEventsByType);
+
