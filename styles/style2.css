@@ -248,10 +248,16 @@
     background: rgb(246, 247, 248);
     padding: 10px;
     font-family: "Roboto", sans-serif;
-    color: rgb(33, 33, 33);
     font-size: 14px;
     border: none;
 }
+.filter > select:hover, 
+.filter > select:focus {
+    background: rgb(224, 224, 224); 
+    border: none; 
+    outline: none; 
+}
+
 .new_york_content {
     width: 131px;
     height: 50px;
