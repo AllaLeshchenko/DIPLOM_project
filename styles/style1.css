@@ -499,7 +499,7 @@ h2 {
     height: 107px;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid #D9D9D9;
+    border-top: 1px solid #D9D9D9;
   }
   .event_child_img {
     margin-top: 15px;
