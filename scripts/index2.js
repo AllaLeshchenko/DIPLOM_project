@@ -18,7 +18,7 @@ const eventsStore = [
     },
     {
       title:
-        "NYC AI Users - AI Tech Talks, Demo & Social: RAG Search and Customer Experience",
+     "NYC AI Users - AI Tech Talks, Demo & Social: RAG Search and Customer Experience",
       description: "New York AI Users",
       date: new Date(2024, 2, 23, 11, 30),
       image: "https://images.unsplash.com/photo-1696258686454-60082b2c33e2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ",
@@ -66,3 +66,43 @@ const eventsStore = [
       distance: 15,
     },
   ];
+
+  const eventsContainer = document.getElementById('events-container');
+
+// Функция для создания карточки
+function createEventCard(event) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  // Форматирование даты
+  const formattedDate = event.date.toLocaleString('en-US', {
+    weekday: 'short',  
+    year: 'numeric',   
+    month: 'short',    
+    day: 'numeric',    
+    hour: '2-digit',   
+    minute: '2-digit', 
+    hour12: true,      
+    timeZone: 'UTC'    
+  });
+
+  card.innerHTML = `
+  <div class="cards">
+    <img src="${event.image}" alt="${event.title}">
+    <div class="card-body">
+      <p class="date">${formattedDate}</p>
+      <h3>${event.title}</h3>
+      <p>${event.description}</p>
+      <p class="category">${event.category}</p>
+      <p class="distance">${event.distance} km away</p>
+      <p class="type">${event.type}
+    </div>
+  `;
+
+  return card;
+}
+// Добавление всех карточек в контейнер
+eventsStore.forEach(event => {
+    const card = createEventCard(event);
+    eventsContainer.appendChild(card);
+  });
