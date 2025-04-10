@@ -138,6 +138,14 @@
   .login {
     border: none;
   }
+@media (max-width: 1000px) {
+   .main {
+    
+   }
+
+}
+
+
   @media (max-width: 500px) {
     .header {
     width: 393px;
