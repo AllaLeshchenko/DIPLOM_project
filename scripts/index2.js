@@ -66,7 +66,7 @@ const eventsStore = [
     },
   ]
 
-// Создаем переменные 
+// Создаем переменные для фильтрации по категориям
 const eventsContainer = document.getElementById('events-container')
 const typeSelect = document.getElementById('type')
 const distanceSelect = document.getElementById('distance')
@@ -77,7 +77,7 @@ function createEventCard(event) {
   const card = document.createElement('div') //создаем контецнер для карточек
   card.classList.add('card') //присваиваем ему класс 
 
-  // Создаем переменную для нужно отображения даты в карточке
+  // Создаем переменную для отображения даты в карточке
   const formattedDate = event.date.toLocaleString('en-US', {
     weekday: 'short',
     year: 'numeric',
@@ -88,6 +88,7 @@ function createEventCard(event) {
     hour12: true,
     timeZone: 'UTC'
   })
+  
 // Создаем саму карточку с такой разметкой
   card.innerHTML = `
     <div class="cards">
@@ -115,52 +116,52 @@ function displayEvents(events) {
 }
 // Cоздаем функцию для фильтрации по типам
 function filterEvents() {
-  const selectedType = typeSelect.value
-  const selectedDistance = distanceSelect.value
-  const selectedCategory = categorySelect.value
+  const type = typeSelect.value
+  const distance = distanceSelect.value
+  const category = categorySelect.value
 
   const filteredEvents = eventsStore.filter(event => {
     // Фильтрация по типу
-    if (selectedType !== 'any' && event.type !== selectedType) {
+    if (type !== 'all' && event.type !== type) {
       return false
     }
 
    //  Фильтрация по расстоянию 
-   if (selectedDistance !== 'any') {
+   if (distance !== 'all') {
     let minDistance = 0
     let maxDistance = Infinity//означает нет ограничения по максимальному расстоянию
   
   // Устанавливаем границы в зависимости от выбранного диапазона
-  if (selectedDistance === '25') {
+  if (distance === '25') {
     minDistance = 0
     maxDistance = 25  // ограничиваем максимальное расстояние 25 км
-  } else if (selectedDistance === '50') {
+  } else if (distance === '50') {
     minDistance = 25
     maxDistance = 50  // ограничиваем максимальное расстояние 50 км
-  } else if (selectedDistance === '100') {
+  } else if (distance === '100') {
     minDistance = 50
     maxDistance = 100  // ограничиваем максимальное расстояние 100 км
   }
   
-  const distance = Number(event.distance); // Преобразуем расстояние в число
+  const interval = Number(event.distance) // Преобразуем расстояние в число
   
   // Если событие выходит за пределы диапазона, исключаем его
-    if (distance < minDistance || distance > maxDistance) {
+    if (interval < minDistance || interval > maxDistance) {
        return false
        }
   }
     
-    // --- Категория ---
+    // фильтрация по категории 
     const categoryMap = {
       socActivities: 'Social Activities',
       hobby: 'Hobbies and Passions',
       business: 'Business',
       technology: 'Technology',
-      heals: 'Health and Wellbeing' // исправлена опечатка "Heals" → "Health"
+      health: 'Health and Wellbeing' 
     }
     if (
-      selectedCategory !== 'any' &&
-      event.category !== categoryMap[selectedCategory]
+      category !== 'all' &&
+      event.category !== categoryMap[category]
     ) {
       return false
     }
@@ -178,7 +179,7 @@ distanceSelect.addEventListener('change', filterEvents)
 categorySelect.addEventListener('change', filterEvents)
 
 // Отображаем все события при загрузке страницы
-displayEvents(eventsStore);
+displayEvents(eventsStore)
 
 
 
