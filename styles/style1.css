@@ -1054,6 +1054,10 @@ a {
   font-size: 14px;
   color: #C5C4C4;
 }
+.footer_column p:hover {
+  color: #fff; 
+  text-decoration: underline; 
+}
 .follows {
   display: flex;
   align-items: center;
