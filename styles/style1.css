@@ -141,7 +141,7 @@
   border: none;
 }
 
-@media (max-width: 393px) {
+@media (max-width: 500px) {
   .header {
   width: 393px;
   height: 95px;
@@ -203,7 +203,6 @@
 }
 
 .main {
-  /* background: rgb(248, 238, 248); */
   max-width: 1512px;
   width: 100%;
   height: auto;
@@ -635,7 +634,7 @@ a {
 .down_cards h5:hover {
   text-decoration: underline;
 }
-@media (max-width: 393px) {
+@media (max-width: 500px) {
 
   .main_up {
     width: 353px;
@@ -958,7 +957,6 @@ a {
     padding-bottom: 30px;
   }
 
-
   .friendships {
     margin-left: 20px;
     gap: 12px;
@@ -969,7 +967,6 @@ a {
   .friendships p {
     display: none;
   }
-
 
   .events_down {
     display: flex;
@@ -1104,7 +1101,7 @@ a {
   font-weight: 400;
   color: #C5C4C4;
 }
-@media (max-width: 393px) {
+@media (max-width: 500px) {
   .footer {
     max-width: 393px;
     width: 100%;

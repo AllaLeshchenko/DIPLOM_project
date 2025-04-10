@@ -138,7 +138,7 @@
   .login {
     border: none;
   }
-  @media (max-width: 393px) {
+  @media (max-width: 500px) {
     .header {
     width: 393px;
     height: 95px;
@@ -324,7 +324,7 @@
     margin-bottom: 3px;
   }
 
-@media (max-width: 393px) {
+@media (max-width: 500px) {
     .main {
         height: auto;
         margin-top: 10px;
@@ -496,7 +496,7 @@
     font-weight: 400;
     color: #C5C4C4;
   }
-  @media (max-width: 393px) {
+  @media (max-width: 500px) {
     .footer {
       max-width: 393px;
       width: 100%;

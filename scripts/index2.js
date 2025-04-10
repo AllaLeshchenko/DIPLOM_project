@@ -1,3 +1,4 @@
+// Переход со второй страници на первую
 const returnToMainPage = document.querySelector('#logo')
 returnToMainPage.addEventListener('click', ()=>{
     window.location.pathname = './index.html'
@@ -67,75 +68,188 @@ const eventsStore = [
     },
   ];
 
-  const eventsContainer = document.getElementById('events-container');
-// Получаем ссылку на все селекты
+// const eventsContainer = document.getElementById('events-container')
+
+// // Получаем ссылку на все селекты
+// const typeSelect = document.getElementById('type')
+// const distanceSelect = document.getElementById('distance')
+// const categorySelect = document.getElementById('category')
+
+
+// // Функция для создания карточки
+// function createEventCard(event) {
+//   const card = document.createElement('div') //создаем контейнер 
+//   card.classList.add('card') //присваиваем ему класс
+
+//   // Форматирование даты 
+//   const formattedDate = event.date.toLocaleString('en-US', {
+//     weekday: 'short',  
+//     year: 'numeric',   
+//     month: 'short',    
+//     day: 'numeric',    
+//     hour: '2-digit',   
+//     minute: '2-digit', 
+//     hour12: true,      
+//     timeZone: 'UTC'    
+//   })
+// // Создаем карточку с таким наполнением
+//   card.innerHTML = `
+//   <div class="cards">
+//     <img src="${event.image}" alt="${event.title}">
+//     <div class="card-body">
+//       <p class="date">${formattedDate}</p>
+//       <h3>${event.title}</h3>
+//       <p>${event.description}</p>
+//       <p class="category">${event.category}</p>
+//       <p class="distance">${event.distance} km away</p>
+//       <p class="type">${event.type}
+//     </div>
+//   `
+//   return card
+// }
+// Добавляем все карточки в контейнер
+// eventsStore.forEach(event => {  // Проходимся по нашему массиву
+//     const card = createEventCard(event);
+//     eventsContainer.appendChild(card);
+//   })
+
+
+
+
+// // Функция для фильтрации событий по типу
+// function filterEventsByType() {
+//     const type = typeSelect.value; // Получаем выбранный тип
+  
+//     // Фильтруем события по типу
+//     const filteredEvents = eventsStore.filter(event => {
+//       return type === 'any' || event.type === type;
+//     });
+  
+//     // Перерисовываем карточки событий
+//     displayEvents(filteredEvents);
+//   }
+//   // Функция для отображения событий
+// function displayEvents(events) {
+//     // Очищаем контейнер перед обновлением
+//     eventsContainer.innerHTML = '';
+  
+//     // Создаем карточки для каждого события
+//     events.forEach(event => {
+//       const card = createEventCard(event);
+//       eventsContainer.appendChild(card);
+//     });
+//   }
+// // Добавляем обработчик события на селектор типа
+// typeSelect.addEventListener('change', filterEventsByType);
+
+
+
+const eventsContainer = document.getElementById('events-container');
 const typeSelect = document.getElementById('type');
 const distanceSelect = document.getElementById('distance');
 const categorySelect = document.getElementById('category');
-// Функция для создания карточки
+
+// Функция создания карточки
 function createEventCard(event) {
   const card = document.createElement('div');
   card.classList.add('card');
 
-  // Форматирование даты
   const formattedDate = event.date.toLocaleString('en-US', {
-    weekday: 'short',  
-    year: 'numeric',   
-    month: 'short',    
-    day: 'numeric',    
-    hour: '2-digit',   
-    minute: '2-digit', 
-    hour12: true,      
-    timeZone: 'UTC'    
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+    timeZone: 'UTC'
   });
 
   card.innerHTML = `
-  <div class="cards">
-    <img src="${event.image}" alt="${event.title}">
-    <div class="card-body">
-      <p class="date">${formattedDate}</p>
-      <h3>${event.title}</h3>
-      <p>${event.description}</p>
-      <p class="category">${event.category}</p>
-      <p class="distance">${event.distance} km away</p>
-      <p class="type">${event.type}
+    <div class="cards">
+      <img src="${event.image}" alt="${event.title}">
+      <div class="card-body">
+        <p class="date">${formattedDate}</p>
+        <h3>${event.title}</h3>
+        <p>${event.description}</p>
+        <p class="category">${event.category}</p>
+        <p class="distance">${event.distance} km away</p>
+        <p class="type">${event.type}</p>
+      </div>
     </div>
   `;
-
   return card;
 }
-// Добавление всех карточек в контейнер
-eventsStore.forEach(event => {
+
+// Функция отображения событий
+function displayEvents(events) {
+  eventsContainer.innerHTML = '';
+  events.forEach(event => {
     const card = createEventCard(event);
     eventsContainer.appendChild(card);
   });
+}
+
+function filterEvents() {
+  const selectedType = typeSelect.value;
+  const selectedDistance = distanceSelect.value;
+  const selectedCategory = categorySelect.value;
+
+  const filteredEvents = eventsStore.filter(event => {
+    // Тип
+    if (selectedType !== 'any' && event.type !== selectedType) {
+      return false;
+    }
+    // --- Расстояние ---
+    let minDistance = 0;
+    let maxDistance = Infinity;
+
+    if (selectedDistance === '25') {
+      maxDistance = 25;
+    } else if (selectedDistance === '50') {
+      minDistance = 25;
+      maxDistance = 50;
+    } else if (selectedDistance === '100') {
+      minDistance = 50;
+      maxDistance = 100;
+    }
+
+    if (event.type === 'offline') {
+      // Только для offline событий имеет смысл фильтровать по расстоянию
+      if (event.distance < minDistance || event.distance > maxDistance) {
+        return false;
+      }
+    }
+
+    // --- Категория ---
+    const categoryMap = {
+      socActivities: 'Social Activities',
+      hobby: 'Hobbies and Passions',
+      business: 'Business',
+      technology: 'Technology',
+      heals: 'Health and Wellbeing' // исправлена опечатка "Heals" → "Health"
+    }
+    if (
+      selectedCategory !== 'any' &&
+      event.category !== categoryMap[selectedCategory]
+    ) {
+      return false;
+    }
+
+    // Если всё прошло — событие подходит
+    return true;
+  });
+
+  displayEvents(filteredEvents);
+}
+
+// Инициализация
+typeSelect.addEventListener('change', filterEvents);
+distanceSelect.addEventListener('change', filterEvents);
+categorySelect.addEventListener('change', filterEvents);
+
+// Показ всех событий при загрузке
+displayEvents(eventsStore);
 
 
-
-
-// Функция для фильтрации событий по типу
-function filterEventsByType() {
-    const type = typeSelect.value; // Получаем выбранный тип
-  
-    // Фильтруем события по типу
-    const filteredEvents = eventsStore.filter(event => {
-      return type === 'any' || event.type === type;
-    });
-  
-    // Перерисовываем карточки событий
-    displayEvents(filteredEvents);
-  }
-  // Функция для отображения событий
-function displayEvents(events) {
-    // Очищаем контейнер перед обновлением
-    eventsContainer.innerHTML = '';
-  
-    // Создаем карточки для каждого события
-    events.forEach(event => {
-      const card = createEventCard(event);
-      eventsContainer.appendChild(card);
-    });
-  }
-// Добавляем обработчик события на селектор типа
-typeSelect.addEventListener('change', filterEventsByType);
 
