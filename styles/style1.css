@@ -260,6 +260,7 @@ p {
    width: 100%;
    height: auto;
    margin: auto;
+   margin-bottom: 20px;
 }
 .ev_near {
   width: 190px;
@@ -387,7 +388,6 @@ a {
 .free p {
   font-size: 16px;
 }
-
 .events_online {
   max-width: 1196px;
   width: 100%;
@@ -408,7 +408,7 @@ a {
   width: 100%;
   height: auto;
   margin: auto;
-  margin-top: 71px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -682,7 +682,7 @@ a {
     max-width: 353px;
     width: 100%;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom: 20px;
    }
    .ev_near {
     width: 160px;
@@ -801,7 +801,6 @@ a {
   
 
   .join_meetup {
-    /* border: 1px solid gray; */
     width: 366px;
     height: 100%;
     margin-left: 20px;
@@ -810,7 +809,7 @@ a {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    margin-top: 270px;
+    margin-top: 20px;
   }
   .join_meetup h2 {
     font-size: 20px;
